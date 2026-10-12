@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<TabPane side="LEFT" rotateGraphic="true" tabMinHeight="120.0" tabMaxHeight="120.0"
+         prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <tabs>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Campsites"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <StackPane>
+                <Label text="Campsites - coming soon"/>
+            </StackPane>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Pitches"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <StackPane>
+                <Label text="Pitches - coming soon"/>
+            </StackPane>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Bookings"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <StackPane>
+                <Label text="Bookings - coming soon"/>
+            </StackPane>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Search"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <StackPane>
+                <Label text="Search - coming soon"/>
+            </StackPane>
+        </Tab>
+    </tabs>
+</TabPane>
