@@ -1,21 +1,22 @@
 # Campsite Management System
 
-Data Structures and Algorithms 1 – CA Exercise 1
-Eoin Brosnan, SETU Waterford
+DSA1 CA Exercise 1 – Eoin Brosnan, SETU Waterford
 
-## About
+A JavaFX app for running multiple campsites. Everything's stored in my own linked list, no ArrayList or built-in collections.
 
-A JavaFX app for managing a campsite. All data is stored in custom-built linked lists rather than Java's built-in collections.
+## What it does
 
-## Features (planned)
-
-- Add and remove campsites, pitches and bookings
-- Search bookings
-- Save and load data between runs
-- JUnit tests for the linked list and models
+- Add campsites, camping areas, plots/pitches and guests
+- Book a guest into a camping area and it picks a suitable free plot
+- Cancel bookings and view pending ones by campsite or overall
+- Look up a guest and see all their bookings
+- Drill down from campsite to area to plot to booking
+- Smart find to suggest somewhere to stay
+- Remove a plot and move its bookings elsewhere
+- Reset everything, and save/load between runs
 
 ## Running it
 
-Needs Java 17 or newer.
+Needs Java 17+. In IntelliJ go to Maven → Plugins → javafx → javafx:run.
 
-Open the project in IntelliJ and run the main class.
+Tests are in `src/test` – run them with Maven → Lifecycle → test.
