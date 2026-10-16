@@ -2,10 +2,11 @@ package ie.setu.campsite.models;
 
 import ie.setu.campsite.datastructures.MyLinkedList;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 // a guest can have loads of bookings across different campsites
-public class Guest {
+public class Guest implements Serializable {
     private int id;
     private String name;
     private LocalDate dateOfBirth;

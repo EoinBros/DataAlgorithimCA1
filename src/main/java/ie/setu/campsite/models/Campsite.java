@@ -1,9 +1,11 @@
 package ie.setu.campsite.models;
 
+import java.io.Serializable;
+
 import ie.setu.campsite.datastructures.MyLinkedList;
 
 // top level - a campsite holds its camping areas
-public class Campsite {
+public class Campsite implements Serializable {
     private String name;
     private String address;
     private int stars;

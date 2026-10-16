@@ -1,10 +1,11 @@
 package ie.setu.campsite.datastructures;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 // my own linked list since we can't use ArrayList/LinkedList for the CA
-public class MyLinkedList<T> implements Iterable<T> {
+public class MyLinkedList<T> implements Iterable<T>, Serializable {
     private Node<T> head;
     private Node<T> tail; // keeping track of the end so add() doesn't have to loop
     private int size;

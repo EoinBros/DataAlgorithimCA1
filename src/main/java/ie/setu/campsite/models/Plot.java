@@ -2,10 +2,11 @@ package ie.setu.campsite.models;
 
 import ie.setu.campsite.datastructures.MyLinkedList;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 // a single plot/pitch - could be a static (mobile home, bungalow etc.) or an empty pitch
-public class Plot {
+public class Plot implements Serializable {
     private String id;
     private String type;
     private boolean powered;

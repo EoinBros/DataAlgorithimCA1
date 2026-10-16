@@ -1,9 +1,11 @@
 package ie.setu.campsite.models;
 
+import java.io.Serializable;
+
 import ie.setu.campsite.datastructures.MyLinkedList;
 
 // an area inside a campsite e.g. "Lake View Area 1" - holds the plots
-public class CampingArea {
+public class CampingArea implements Serializable {
     private String id;
     private String description;
     private MyLinkedList<Plot> plots = new MyLinkedList<>();

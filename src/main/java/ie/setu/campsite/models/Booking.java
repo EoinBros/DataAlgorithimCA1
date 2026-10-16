@@ -1,10 +1,11 @@
 package ie.setu.campsite.models;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 // a booking for a guest - the preferences are used to pick a plot, then plot gets set
-public class Booking {
+public class Booking implements Serializable {
     private LocalDate start;
     private LocalDate end;
     private String areaId;
@@ -61,6 +62,7 @@ public class Booking {
                 && (!powered || p.isPowered())
                 && p.getSize() >= minSize
                 && p.getBedrooms() >= minBedrooms
+                && (!p.isStatic() || p.getBeds() >= numGuests)
                 && p.getCostPerNight() * getNights() <= budget
                 && p.isAvailable(start, end);
     }
