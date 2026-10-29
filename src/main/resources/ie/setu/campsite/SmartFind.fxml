@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ie.setu.campsite.controllers.SmartFindController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Smart Find" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Number of guests" GridPane.rowIndex="0"/>
+        <TextField fx:id="numGuests" promptText="" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Budget (€)" GridPane.rowIndex="1"/>
+        <TextField fx:id="budget" promptText="for the whole stay" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Min stars" GridPane.rowIndex="2"/>
+        <TextField fx:id="minStars" promptText="optional" prefWidth="250" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Start date" GridPane.rowIndex="3"/>
+        <DatePicker fx:id="startDate" prefWidth="250" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="End date" GridPane.rowIndex="4"/>
+        <DatePicker fx:id="endDate" prefWidth="250" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label text="Facilities wanted" GridPane.rowIndex="5"/>
+        <TextField fx:id="facilities" promptText="e.g. pool, air con" prefWidth="250" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Find" onAction="#find"/>
+    </HBox>
+    <Label fx:id="result" wrapText="true"/>
+    <HBox spacing="10">
+        <ChoiceBox fx:id="guestChoice" prefWidth="250"/>
+        <Button text="Book It" onAction="#bookIt"/>
+    </HBox>
+</VBox>

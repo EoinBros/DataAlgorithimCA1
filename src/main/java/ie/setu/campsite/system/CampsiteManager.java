@@ -74,6 +74,16 @@ public class CampsiteManager implements Serializable {
         return true;
     }
 
+    // books one particular plot - smart find uses this so it gets the plot it suggested
+    public boolean bookPlot(Booking booking, Plot plot) {
+        if (!booking.suits(plot)) {
+            return false;
+        }
+        assign(booking, plot);
+        booking.getGuest().addBooking(booking);
+        return true;
+    }
+
     private Plot findSuitablePlot(CampingArea area, Booking booking) {
         for (Plot p : area.getPlots()) {
             if (booking.suits(p)) {

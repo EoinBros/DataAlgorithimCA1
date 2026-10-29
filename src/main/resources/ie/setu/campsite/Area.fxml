@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ie.setu.campsite.controllers.AreaController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Camping Areas" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Campsite" GridPane.rowIndex="0"/>
+        <ChoiceBox fx:id="campsiteChoice" onAction="#showAreas" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Area ID" GridPane.rowIndex="1"/>
+        <TextField fx:id="areaId" promptText="e.g. Lake View Area 1" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Description" GridPane.rowIndex="2"/>
+        <TextField fx:id="description" promptText="" prefWidth="250" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Add Area" onAction="#addArea"/>
+    </HBox>
+    <ListView fx:id="areaList" VBox.vgrow="ALWAYS"/>
+</VBox>

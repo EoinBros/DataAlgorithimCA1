@@ -30,3 +30,6 @@ bin/
 .DS_Store
 ### Maven ###
 target/
+
+### Saved data ###
+campsites.dat

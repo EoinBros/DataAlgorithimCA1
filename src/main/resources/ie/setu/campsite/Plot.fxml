@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ie.setu.campsite.controllers.PlotController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Plots / Pitches" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Campsite" GridPane.rowIndex="0"/>
+        <ChoiceBox fx:id="campsiteChoice" onAction="#showAreas" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Area" GridPane.rowIndex="1"/>
+        <ChoiceBox fx:id="areaChoice" onAction="#showPlots" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Plot ID" GridPane.rowIndex="2"/>
+        <TextField fx:id="plotId" promptText="" prefWidth="250" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Type" GridPane.rowIndex="3"/>
+        <ChoiceBox fx:id="typeChoice" prefWidth="250" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="Power" GridPane.rowIndex="4"/>
+        <CheckBox fx:id="powered" text="Has power (statics always do)" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        <Label text="Bedrooms" GridPane.rowIndex="5"/>
+        <TextField fx:id="bedrooms" promptText="statics only" prefWidth="250" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        <Label text="Beds" GridPane.rowIndex="6"/>
+        <TextField fx:id="beds" promptText="statics only" prefWidth="250" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+        <Label text="Size (m²)" GridPane.rowIndex="7"/>
+        <TextField fx:id="size" promptText="" prefWidth="250" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+        <Label text="Cost per night (€)" GridPane.rowIndex="8"/>
+        <TextField fx:id="cost" promptText="" prefWidth="250" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+        <Label text="Photo URL" GridPane.rowIndex="9"/>
+        <TextField fx:id="photoUrl" promptText="" prefWidth="250" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+        <Label text="Facilities" GridPane.rowIndex="10"/>
+        <TextField fx:id="facilities" promptText="e.g. air con, tv" prefWidth="250" GridPane.rowIndex="10" GridPane.columnIndex="1"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Add Plot" onAction="#addPlot"/>
+        <Button text="Remove Selected Plot" onAction="#removePlot"/>
+    </HBox>
+    <ListView fx:id="plotList" VBox.vgrow="ALWAYS"/>
+</VBox>

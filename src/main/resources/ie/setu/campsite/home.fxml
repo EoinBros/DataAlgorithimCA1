@@ -6,8 +6,8 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.StackPane?>
 
-<TabPane side="LEFT" rotateGraphic="true" tabMinHeight="120.0" tabMaxHeight="120.0"
-         prefHeight="600.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE"
+<TabPane side="LEFT" rotateGraphic="true" tabMinHeight="100.0" tabMaxHeight="100.0"
+         prefHeight="700.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE"
          xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <tabs>
         <Tab>
@@ -18,21 +18,37 @@
                     </StackPane>
                 </Group>
             </graphic>
-            <StackPane>
-                <Label text="Campsites - coming soon"/>
-            </StackPane>
+            <fx:include source="Campsite.fxml"/>
         </Tab>
         <Tab>
             <graphic>
                 <Group>
                     <StackPane rotate="90.0">
-                        <Label text="Pitches"/>
+                        <Label text="Areas"/>
                     </StackPane>
                 </Group>
             </graphic>
-            <StackPane>
-                <Label text="Pitches - coming soon"/>
-            </StackPane>
+            <fx:include source="Area.fxml"/>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Plots"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <fx:include source="Plot.fxml"/>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Guests"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <fx:include source="Guest.fxml"/>
         </Tab>
         <Tab>
             <graphic>
@@ -42,21 +58,27 @@
                     </StackPane>
                 </Group>
             </graphic>
-            <StackPane>
-                <Label text="Bookings - coming soon"/>
-            </StackPane>
+            <fx:include source="Booking.fxml"/>
         </Tab>
         <Tab>
             <graphic>
                 <Group>
                     <StackPane rotate="90.0">
-                        <Label text="Search"/>
+                        <Label text="View"/>
                     </StackPane>
                 </Group>
             </graphic>
-            <StackPane>
-                <Label text="Search - coming soon"/>
-            </StackPane>
+            <fx:include source="View.fxml"/>
+        </Tab>
+        <Tab>
+            <graphic>
+                <Group>
+                    <StackPane rotate="90.0">
+                        <Label text="Smart Find"/>
+                    </StackPane>
+                </Group>
+            </graphic>
+            <fx:include source="SmartFind.fxml"/>
         </Tab>
     </tabs>
 </TabPane>

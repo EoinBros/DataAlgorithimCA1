@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ie.setu.campsite.controllers.CampsiteController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="Campsites" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <GridPane hgap="10" vgap="8">
+        <Label text="Name" GridPane.rowIndex="0"/>
+        <TextField fx:id="name" promptText="" prefWidth="250" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        <Label text="Address" GridPane.rowIndex="1"/>
+        <TextField fx:id="address" promptText="" prefWidth="250" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        <Label text="Stars (1-5)" GridPane.rowIndex="2"/>
+        <TextField fx:id="stars" promptText="" prefWidth="250" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        <Label text="Contact" GridPane.rowIndex="3"/>
+        <TextField fx:id="contact" promptText="phone / email" prefWidth="250" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <Label text="Facilities" GridPane.rowIndex="4"/>
+        <TextField fx:id="facilities" promptText="e.g. pool, shop, wifi" prefWidth="250" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Add Campsite" onAction="#addCampsite"/>
+    </HBox>
+    <ListView fx:id="campsiteList" VBox.vgrow="ALWAYS"/>
+    <HBox spacing="10">
+        <Button text="Save" onAction="#save"/>
+        <Button text="Load" onAction="#load"/>
+        <Button text="Reset" onAction="#reset"/>
+    </HBox>
+</VBox>

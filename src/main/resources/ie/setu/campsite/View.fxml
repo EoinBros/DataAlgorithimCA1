@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ie.setu.campsite.controllers.ViewController">
+    <padding><Insets top="15" right="15" bottom="15" left="15"/></padding>
+    <Label text="View" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <HBox spacing="10">
+        <ChoiceBox fx:id="campsiteChoice" prefWidth="250"/>
+        <Button text="Pending in This Campsite" onAction="#showCampsiteBookings"/>
+        <Button text="Pending Overall" onAction="#showAllBookings"/>
+    </HBox>
+    <TextArea fx:id="output" editable="false" prefHeight="220"/>
+    <Label text="Drill down (click to see details):"/>
+    <HBox spacing="10" VBox.vgrow="ALWAYS">
+        <TreeView fx:id="drillDown" onMouseClicked="#itemClicked" prefWidth="380"/>
+        <TextArea fx:id="details" editable="false" HBox.hgrow="ALWAYS"/>
+    </HBox>
+</VBox>
